@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<p:FatturaElettronica xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" versione="FPR12">
+ <FatturaElettronicaHeader>
+ <DatiTrasmissione>
+ <IdTrasmittente>
+ <IdPaese>IT</IdPaese>
+ <IdCodice>08273180961</IdCodice>
+ </IdTrasmittente>
+ <ProgressivoInvio>913008700</ProgressivoInvio>
+ <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+ <CodiceDestinatario>0000000</CodiceDestinatario>
+ </DatiTrasmissione>
+ <CedentePrestatore>
+ <DatiAnagrafici>
+ <IdFiscaleIVA>
+ <IdPaese>IT</IdPaese>
+ <IdCodice>08273180961</IdCodice>
+ </IdFiscaleIVA>
+ <Anagrafica>
+ <Denominazione>Unicity Italy S.r.l.</Denominazione>
+ </Anagrafica>
+ <RegimeFiscale>RF13</RegimeFiscale>
+ </DatiAnagrafici>
+ <Sede>
+ <Indirizzo>Via Melchiorre Gioia 8</Indirizzo>
+ <CAP>20124</CAP>
+ <Comune>Milano</Comune>
+ <Provincia>MI</Provincia>
+ <Nazione>IT</Nazione>
+ </Sede>
+ </CedentePrestatore>
+ <RappresentanteFiscale>
+ <DatiAnagrafici>
+ <IdFiscaleIVA>
+ <IdPaese>IT</IdPaese>
+ <IdCodice>09585290969</IdCodice>
+ </IdFiscaleIVA>
+ <Anagrafica>
+ <Denominazione>Grant Thornton Financial Advisory Services</Denominazione>
+ </Anagrafica>
+ </DatiAnagrafici>
+ </RappresentanteFiscale>
+ <CessionarioCommittente>
+ <DatiAnagrafici>
+ <Anagrafica>
+ <Denominazione>BRAVI FARMACIE SRL</Denominazione>
+ </Anagrafica>
+ </DatiAnagrafici>
+ <Sede>
+ <Indirizzo>Via San Zeno 95</Indirizzo>
+ <CAP>25124</CAP>
+ <Comune>BRESCIA (BS)</Comune>
+ <Nazione>IT</Nazione>
+ </Sede>
+ </CessionarioCommittente>
+ </FatturaElettronicaHeader>
+ <FatturaElettronicaBody>
+ <DatiGenerali>
+ <DatiGeneraliDocumento>
+ <TipoDocumento>TD01</TipoDocumento>
+ <Divisa>EUR</Divisa>
+ <Data>2019-05-03</Data>
+ <Numero>550386</Numero>
+ <Causale>Vendite di prodotti</Causale>
+ </DatiGeneraliDocumento>
+ <DatiOrdineAcquisto>
+ <RiferimentoNumeroLinea>1</RiferimentoNumeroLinea>
+ <RiferimentoNumeroLinea>2</RiferimentoNumeroLinea>
+ <RiferimentoNumeroLinea>3</RiferimentoNumeroLinea>
+ <RiferimentoNumeroLinea>4</RiferimentoNumeroLinea>
+ <IdDocumento>9130087</IdDocumento>
+ <NumItem>1</NumItem>
+ </DatiOrdineAcquisto>
+ </DatiGenerali>
+ <DatiBeniServizi>
+ <DettaglioLinee>
+ <NumeroLinea>1</NumeroLinea>
+ <Descrizione>Integratori alimentari</Descrizione>
+ <Quantita>3.00</Quantita>
+ <PrezzoUnitario>92.43</PrezzoUnitario>
+ <PrezzoTotale>277.29</PrezzoTotale>
+ <AliquotaIVA>10.00</AliquotaIVA>
+ </DettaglioLinee>
+ <DettaglioLinee>
+ <NumeroLinea>2</NumeroLinea>
+ <Descrizione>Integratori alimentari</Descrizione>
+ <Quantita>6.00</Quantita>
+ <PrezzoUnitario>19.00</PrezzoUnitario>
+ <PrezzoTotale>114.00</PrezzoTotale>
+ <AliquotaIVA>10.00</AliquotaIVA>
+ </DettaglioLinee>
+ <DettaglioLinee>
+ <NumeroLinea>3</NumeroLinea>
+ <Descrizione>Integratori alimentari</Descrizione>
+ <Quantita>6.00</Quantita>
+ <PrezzoUnitario>74.67</PrezzoUnitario>
+ <PrezzoTotale>448.02</PrezzoTotale>
+ <AliquotaIVA>10.00</AliquotaIVA>
+ </DettaglioLinee>
+ <DettaglioLinee>
+ <NumeroLinea>4</NumeroLinea>
+ <TipoCessionePrestazione>AC</TipoCessionePrestazione>
+ <Descrizione>Spese di Trasporto</Descrizione>
+ <Quantita>1.00</Quantita>
+ <PrezzoUnitario>15.08</PrezzoUnitario>
+ <PrezzoTotale>15.08</PrezzoTotale>
+ <AliquotaIVA>22.00</AliquotaIVA>
+ </DettaglioLinee>
+ <DatiRiepilogo>
+ <AliquotaIVA>22.00</AliquotaIVA>
+ <ImponibileImporto>15.08</ImponibileImporto>
+ <Imposta>3.32</Imposta>
+ <EsigibilitaIVA>I</EsigibilitaIVA>
+ </DatiRiepilogo>
+ <DatiRiepilogo>
+ <AliquotaIVA>10.00</AliquotaIVA>
+ <ImponibileImporto>839.31</ImponibileImporto>
+ <Imposta>83.93</Imposta>
+ <EsigibilitaIVA>I</EsigibilitaIVA>
+ </DatiRiepilogo>
+ </DatiBeniServizi>
+ <DatiPagamento>
+ <CondizioniPagamento>TP02</CondizioniPagamento>
+ <DettaglioPagamento>
+ <ModalitaPagamento>MP08</ModalitaPagamento>
+ <DataScadenzaPagamento>2019-05-03</DataScadenzaPagamento>
+ <ImportoPagamento>941.64</ImportoPagamento>
+ </DettaglioPagamento>
+ </DatiPagamento>
+ </FatturaElettronicaBody>
+ </p:FatturaElettronica>

@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 8
     y: 51
     width: 2255
     height: 1341
+=======
+    x: 0
+    y: 44
+    width: 1440
+    height: 801
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
@@ -165,8 +172,13 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 50
 --- !u!114 &8
+=======
+  controlID: 30
+--- !u!114 &6
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,8 +202,13 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 51
 --- !u!114 &9
+=======
+  controlID: 31
+--- !u!114 &7
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,8 +232,13 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 52
 --- !u!114 &10
+=======
+  controlID: 32
+--- !u!114 &8
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,8 +314,13 @@ MonoBehaviour:
   m_MinSize: {x: 331, y: 271}
   m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 118
 --- !u!114 &13
+=======
+  controlID: 83
+--- !u!114 &11
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -500,9 +527,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 5c3d0000
       m_LastClickedID: 15708
       m_ExpandedIDs: e6efffffe6f0ffff5c3d0000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e2faffff82fbffff
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -646,6 +679,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -653,13 +687,28 @@ MonoBehaviour:
   - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\Unity\procedural_world
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: /Users/peterj/Projects/personal/procedural_world
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: e43b0000
     m_LastClickedID: 15332
     m_ExpandedIDs: 00000000e03b000000ca9a3b
+=======
+    m_SelectedIDs: 0a320000
+    m_LastClickedID: 12810
+    m_ExpandedIDs: 000000000232000000ca9a3b
+>>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
