@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 public class MapGenerator : MonoBehaviour {
 
-<<<<<<< HEAD
     public enum DrawMode
     {
         NoiseMap,
@@ -19,18 +18,7 @@ public class MapGenerator : MonoBehaviour {
     [Range(0, 6)]
     public int LOD;
 
-    public DrawMode drawMode;
-=======
-    public enum DrawMode
-    {
-        NoiseMap, ColorMap
-    }
-    public DrawMode drawMode;
-
-
-    public int mapWidth;
-	public int mapHeight;
->>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
+	public DrawMode drawMode;
 	public float noiseScale;
 
     public int octaves;
@@ -45,7 +33,6 @@ public class MapGenerator : MonoBehaviour {
 
     public bool autoUpdate;
 
-<<<<<<< HEAD
     public TerrainType[] regions;
 
     Queue<MapThreadInfo<MapData>> mapDataThread = new Queue<MapThreadInfo<MapData>>();
@@ -111,40 +98,6 @@ public class MapGenerator : MonoBehaviour {
         }
 
         return new MapData(noiseMap, colors);
-=======
-    public TerrainType[] regions;
-
-	public void GenerateMap() {
-		float[,] noiseMap = Noise.GenerateNoiseMap (mapWidth, mapHeight, seed, noiseScale, octaves, persistance, lacunarity, offset);
-
-        Color[] colors = new Color[mapWidth * mapHeight];
-
-        for(int y = 0; y < mapHeight; y++)
-        {
-            for (int x = 0;x  < mapWidth; x++)
-            {
-                float currentHeight = noiseMap[x, y];
-                for(int i=0; i<regions.Length;i++)
-                {
-                    if(currentHeight <= regions[i].height)
-                    {
-                        colors[y * mapWidth + x] = regions[i].color;
-                        break;
-                    }
-                }
-            }
-        }
-
-        MapDisplay display = FindObjectOfType<MapDisplay>();
-        if(drawMode == DrawMode.NoiseMap)
-        {
-            display.DrawTexture(TextureGenerator.TextureFromHeightMap(noiseMap)); 
-        }
-        else if(drawMode == DrawMode.ColorMap)
-        {
-            display.DrawTexture(TextureGenerator.TextureFromColorMap(colors, mapWidth, mapHeight));
-        }
->>>>>>> dca8136c7c7282d8308c4383d839d35acb8a8a24
 	}
 
     public void RequestMapData(Action<MapData> cb)
@@ -226,12 +179,4 @@ public struct MapData
         this.heightMap = heightMap;
         this.colors = colors;
     }
-}
-
-[System.Serializable]
-public struct TerrainType
-{
-    public string name;
-    public float height;
-    public Color color;
 }
