@@ -40,7 +40,7 @@ public class MapGenerator : MonoBehaviour {
 
     public void DrawMapInEditor()
     {
-        MapData mapData = GenerateMapData();
+        MapData mapData = GenerateMapData(Vector2.zero);
         MapDisplay display = FindObjectOfType<MapDisplay>();
 
         if (drawMode == DrawMode.NoiseMap)
@@ -77,8 +77,8 @@ public class MapGenerator : MonoBehaviour {
         }
     }
 
-	 MapData GenerateMapData() {
-		float[,] noiseMap = Noise.GenerateNoiseMap (MAP_CHUNK_SIZE, MAP_CHUNK_SIZE, seed, noiseScale, octaves, persistance, lacunarity, offset);
+	 MapData GenerateMapData(Vector2 center) {
+		float[,] noiseMap = Noise.GenerateNoiseMap (MAP_CHUNK_SIZE, MAP_CHUNK_SIZE, seed, noiseScale, octaves, persistance, lacunarity, center + offset);
 
         Color[] colors = new Color[MAP_CHUNK_SIZE * MAP_CHUNK_SIZE];
         for (int y = 0; y < MAP_CHUNK_SIZE; y++)
@@ -100,35 +100,35 @@ public class MapGenerator : MonoBehaviour {
         return new MapData(noiseMap, colors);
 	}
 
-    public void RequestMapData(Action<MapData> cb)
+    public void RequestMapData(Vector2 center, Action<MapData> cb)
     {
         ThreadStart threadStart = delegate
         {
-            MapDataThread(cb);
+            MapDataThread(center, cb);
         };
         new Thread(threadStart).Start();
     }
 
-    void MapDataThread(Action<MapData> cb)
+    void MapDataThread(Vector2 center, Action<MapData> cb)
     {
-        MapData mapData = GenerateMapData();
+        MapData mapData = GenerateMapData(center);
         lock (mapDataThread) { 
             mapDataThread.Enqueue(new MapThreadInfo<MapData>(cb, mapData));
         }
     }
 
-    public void RequestMeshData(MapData mapData, Action<MeshData> cb)
+    public void RequestMeshData(MapData mapData, int lod, Action<MeshData> cb)
     {
         ThreadStart threadStart = delegate
         {
-            MeshDataThread(mapData, cb);
+            MeshDataThread(mapData, lod, cb);
         };
         new Thread(threadStart).Start();
     }
 
-    void MeshDataThread(MapData mapData, Action<MeshData> cb)
+	void MeshDataThread(MapData mapData, int lod, Action<MeshData> cb)
     {
-        MeshData meshData = MeshGenerator.GenerateTerrainMesh(mapData.heightMap, meshHeightMultiplier, meshHeightCurve, LOD);
+        MeshData meshData = MeshGenerator.GenerateTerrainMesh(mapData.heightMap, meshHeightMultiplier, meshHeightCurve, lod);
         lock(meshDataThread)
         {
             meshDataThread.Enqueue(new MapThreadInfo<MeshData>(cb, meshData));
