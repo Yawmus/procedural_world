@@ -7,7 +7,12 @@ public class MapDisplay : MonoBehaviour {
     public MeshFilter meshFilter;
     public MeshRenderer meshRenderer;
 
-	public void DrawTexture(Texture2D texture) {
+    public void Start()
+    {
+        GameObject.Find("Mesh").SetActive(false);
+    }
+
+    public void DrawTexture(Texture2D texture) {
 		textureRender.sharedMaterial.mainTexture = texture;
 		textureRender.transform.localScale = new Vector3 (texture.width, 1, texture.height);
 	}
